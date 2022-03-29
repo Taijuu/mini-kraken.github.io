@@ -1,80 +1,58 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>IMC</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-
-
-
-<style> 
-    body {
-        background-color: #1b1c22;
-    }
-
-    .iimc {
-        color: #3c50fa;
-    }
-</style>
-
-
-
-
-
-
-<script>
-    
-     
-    function mostra(texto) { 
-        document.write(texto);
-    }
-
-    function calculaImc(altura, peso) {
-        return peso / (altura * altura);
-    }
-
-    //Insira aqui os valores.
-    var altura = parseFloat(prompt("Informe Sua Altura"));
-    var peso = parseFloat(prompt("Informe Seu Peso"));
-
-
-    //Executar e Retornar
-    
-    var imc = calculaImc(altura, peso);
-    mostra("<h1 class='iimc'>" + "O IMC calculado é " + imc + "</h1>");
-
-        if(imc < 17) {
-            mostra("<h2 class='iimc'>Muito Abaixo do Peso</h2>");
-        }
-        else if(imc < 18.5) {
-            mostra("<h2 class='iimc'>Abaixo do Peso</h2>");
-        }
-        else if(imc < 24.99) {
-            mostra("<h2 class='iimc'>Peso Ideal</h2>");
-        }
-        else if(imc < 29.99) {
-            mostra("<h2 class='iimc'>Acima do Peso</h2>");
-        }
-        else if(imc < 34.99) {
-            mostra("<h2 class='iimc'>Obesidade Tipo 1</h2>");
-        }
-        else if(imc < 39.99) {
-            mostra("<h2 class='iimc'>Obesidade Tipo 2</h2>");
-        }
-        else if(imc > 40) {
-            mostra("<h2 class='iimc'>Obesidade Morbida</h2>");
-        }
-  
-//IMC abaixo de 17 = muito abaixo do peso
-//IMC entre 17 e 18,49 = abaixo do peso
-//IMC entre 18,5 e 24,99 = ideal
-//IMC entre 25 e 29,99 = acima do peso ideal
-//IMC entre 30 e 34,99 = obesidade nível I
-//IMC entre 35 e 39,99 = obesidade nível II considerada ‘severa’
-//IMC acima de 40 = obesidade nível III considerada ‘mórbida’
-
-</script>
-
+<!DOCTYPE html>
+<html lang="pt-BR" class="background">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-kraken bot</title>
+    <link rel="stylesheet" href="/site/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <script src="/site/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/site/scss/custom.css"/>
+    <link rel="stylesheet" href="/site/css/main.css"/>
+    <link rel="icon" href="/site/img/logo5.png">
+</head>
+<body class="background" style="margin-top: 100px;">
+    <!--Navbar start-->
+    <div class="fixed-top">
+        <nav class="shadow-lg navbar navbar-expand-lg navbar-dark bg-kraken-dark">
+            <div class="container-fluid">
+                <a class="me-auto navbar-brand" href="/site/">
+                    <img src="/site/img/logo5.png" alt="Mini-kraken" height="40">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/premium.html">Premium</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/equipe.html">Equipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://discord.gg/a6BaUvYeY3" target="_blank">Guilda de suporte</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Documentação
+                        </a>
+                        <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item text-white-kraken" href="/docs/dados.html">Dados</a></li>
+                            <li><a class="dropdown-item text-white-kraken" href="/docs/comandos.html">Comandos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-white-kraken" href="/docs/terms-of-service.pdf">Termos de serviço</a></li>
+                            <li><a class="dropdown-item text-white-kraken" href="/docs/privacy-policy.pdf">Política de privacidade</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-kraken" href="javascript:void(0)"><button type="button" onclick="window.open('https:\/\/discord.com/api/oauth2/authorize?client_id=899421595125288961&permissions=8&scope=bot%20applications.commands', 'Adicionar bot', 'width=800, height=600')" class="btn btn-primary"><strong>Me Adicione!</strong></button></a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--Navbar end-->
+</body>
+</html>
