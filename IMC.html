@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>IMC</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+
+
+
+<style> 
+    body {
+        background-color: #1b1c22;
+    }
+
+    .iimc {
+        color: #3c50fa;
+    }
+</style>
+
+
+
+
+
+<script>
+    function mostra(texto) { 
+        document.write(texto);
+    }
+
+    function calculaImc(altura, peso) {
+        return peso / (altura * altura);
+    }
+
+    //Insira aqui os valores.
+    var altura = parseFloat(prompt("Informe Sua Altura"));
+    var peso = parseFloat(prompt("Informe Seu Peso"));
+
+
+    //Executar e Retornar
+    
+    var imc = calculaImc(altura, peso);
+    mostra("<h1 class='iimc'>" + "O IMC calculado é " + imc + "</h1>");
+
+        if(imc < 17) {
+            mostra("<h2 class='iimc'>Muito Abaixo do Peso</h2>");
+        }
+        else if(imc < 18.5) {
+            mostra("<h2 class='iimc'>Abaixo do Peso</h2>");
+        }
+        else if(imc < 24.99) {
+            mostra("<h2 class='iimc'>Peso Ideal</h2>");
+        }
+        else if(imc < 29.99) {
+            mostra("<h2 class='iimc'>Acima do Peso</h2>");
+        }
+        else if(imc < 34.99) {
+            mostra("<h2 class='iimc'>Obesidade Tipo 1</h2>");
+        }
+        else if(imc < 39.99) {
+            mostra("<h2 class='iimc'>Obesidade Tipo 2</h2>");
+        }
+        else if(imc > 40) {
+            mostra("<h2 class='iimc'>Obesidade Morbida</h2>");
+        }
+  
+//IMC abaixo de 17 = muito abaixo do peso
+//IMC entre 17 e 18,49 = abaixo do peso
+//IMC entre 18,5 e 24,99 = ideal
+//IMC entre 25 e 29,99 = acima do peso ideal
+//IMC entre 30 e 34,99 = obesidade nível I
+//IMC entre 35 e 39,99 = obesidade nível II considerada ‘severa’
+//IMC acima de 40 = obesidade nível III considerada ‘mórbida’
+
+</script>

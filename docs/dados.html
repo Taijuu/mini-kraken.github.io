@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="background">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Documentação</title>
+        <link rel="stylesheet" href="/site/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+        <script src="/site/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/site/scss/custom.css"/>
+        <link rel="stylesheet" href="/site/css/main.css"/>
+        <link rel="icon" href="/site/img/logo5.png">
+    </head>
+    <body class="background text-white-kraken" style="margin-top: 100px;">
+
+        <!--Navbar start-->
+        <div class="fixed-top">
+            <nav class="shadow-lg navbar navbar-expand-lg navbar-dark bg-kraken-dark">
+                <div class="container-fluid">
+                    <a class="me-auto navbar-brand" href="/site/">
+                        <img src="/site/img/logo5.png" alt="Mini-kraken" height="40">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/site/premium.html">Premium</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/site/equipe.html">Equipe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://discord.gg/a6BaUvYeY3" target="_blank">Guilda de suporte</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Documentação
+                            </a>
+                            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item text-white-kraken" href="/site/docs/dados.html">Dados</a></li>
+                                <li><a class="dropdown-item text-white-kraken" href="/site/docs/comandos.html">Comandos</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-white-kraken" href="/site/docs/terms-of-service.pdf">Termos de serviço</a></li>
+                                <li><a class="dropdown-item text-white-kraken" href="/site/docs/privacy-policy.pdf">Política de privacidade</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-kraken" href="javascript:void(0)"><button type="button" onclick="window.open('https:\/\/discord.com/api/oauth2/authorize?client_id=899421595125288961&permissions=8&scope=bot%20applications.commands', 'Adicionar bot', 'width=800, height=600')" class="btn btn-primary"><strong>Me Adicione!</strong></button></a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--Navbar end-->
+
+        <h1 class="text-center">Sintaxe dos dados</h1>
+        <div class="info-block mx-auto">
+            <div class="box-separator">
+                <p>Utilizamos a sintaxe padrão de dados para RPG, <span class="text-primary">&ltnúmero de dados&gt</span> <span class="text-info">d</span> <span class="text-warning">&ltnúmero de lados do dado&gt</span></p>
+                <p>Exemplos:</p>
+                <ul>
+                    <li><span class="text-primary">5</span><span class="text-info">d</span><span class="text-warning">20</span>: Roda 5 dados de 20 lados e retorna a soma de todos eles</li>
+                <li><span class="text-primary">100</span><span class="text-info">d</span><span class="text-warning">4</span>: Roda 100 dados de 4 lados e retorna a soma de todos eles</li>
+                </ul>
+                <h6>Por padrão, se não for escrito o número de dados, será considerado 1, e se não for escrito o número de lados, será considerado 20.</h6>
+                <p>Exemplos:</p>
+                <ul>
+                    <li><span class="text-info">d</span><span class="text-warning">5</span>: Roda 1 dado de 5 lados</li>
+                    <li><span class="text-primary">42</span><span class="text-info">d</span>: Roda 42 dados de 20 lados</li>
+                    <li><span class="text-info">d</span>: Roda 1 dado de 20 lados</li>
+                </ul>
+                <p>Obs: Para evitar ataques DoS ao bot, a quantidade total de dados não pode ultrapassar 200, e a quantidade máxima de lados de um dado é 1000.</p>
+                <br>
+                <h4 class="text-center">Mas nosso bot tem bem mais modificadores do que simples dados comuns de RPG!</h4>
+                <p>Todo modificador será escrito da seguinte maneira:</p>
+                <p><span class="text-primary">&ltmodificador&gt</span><span class="text-warning">&ltnúmero&gt</span></p>
+                <p>Onde <span class="text-primary">modificador</span> é a letra (ou letras) que o representa, e <span class="text-warning">número</span> o número que este modificador recebe.</p>
+                <p>Todos os modificadores de dados são combináveis entre si, a não ser que seja explicitado o oposto.</p>
+                <br>
+                
+                <br>
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-lg-6 box-separator">
+                    <h2 class="text-center">Explosivo</h2>
+                    <p>Dados explosivos são dados que, caso a rolagem caia determinado número ou mais, rolam novamente.</p>
+                    <p>Sintaxe:</p>
+                    <ul>
+                        <li><span class="text-primary">e</span>: Caso o número rolado seja maior que o número pedido, explode o dado uma única vez.</li>
+                        <li><span class="text-primary">ei</span>: Explode até que o resultado seja menor que o número pedido.</li>
+                    </ul>
+                    <p>Exemplos:</p>
+                    <ul>
+                        <li>d20<span class="text-primary">e</span><span class="text-warning">5</span>: Se o dado original cair maior ou igual a 5, rola mais uma vez</li>
+                        <li>d30<span class="text-primary">ei</span><span class="text-warning">10</span>: Se o dado cair maior ou igual a 10, rola mais uma vez, e caso o novo dado também, rola novamente, até que o resultado seja menor que 10</li>
+                    </ul>
+                    <h6>Por padrão, se não for escrito o número, será considerado o número máximo do dado.</h6>
+                    <p>Exemplos:</p>
+                    <ul>
+                        <li>15d24<span class="text-primary">e</span> = 15d24<span class="text-primary">e</span><span class="text-warning">24</span></li>
+                        <li>5d4<span class="text-primary">ei</span> = 5d4<span class="text-primary">ei</span><span class="text-warning">4</span></li>
+                    </ul>
+
+                    <p>Obs: Para evitar ataques DoS ao bot, limitamos a quantidade de explosões para 200, mesmo porque usando de forma legítima você nunca vai precisar de mais do que isso.</p>
+                    <h5 class="text-warning">Incompatível com dados keep por gerar ambiguidades demais.</h5>
+                </div>
+
+
+
+                <div class="col-lg-6 box-separator">
+                    <h2 class="text-center">Keep</h2>
+                    <p>Apenas os maiores ou menores números são mantidos.</p>
+                    <p>Sintaxe:</p>
+                    <ul>
+                        <li><span class="text-primary">k</span>: Mantém apenas os maiores números da rolagem, o resto descarta.</li>
+                        <li><span class="text-primary">km</span>: Mantém apenas os menores números da rolagem, o resto descarta.</li>
+                    </ul>
+                    <p>Exemplos:</p>
+                    <ul>
+                        <li>12d<span class="text-primary">k</span><span class="text-warning">5</span>: Supondo um resultado de <span class="text-success">{3, 5, 10, 15, 2, 1, 6, 8, 2, 20, 9, 19}</span>, manterá apenas os 5 <strong>maiores</strong>, ou seja, <span class="text-success">{10, 15, 20, 9, 19}</span></li>
+                        <li>12d<span class="text-primary">km</span><span class="text-warning">5</span>: Supondo o mesmo resultado de antes (<span class="text-success">{3, 5, 10, 15, 2, 1, 6, 8, 2, 20, 9, 19}</span>), manterá apenas os 5 <strong>menores</strong>, ou seja, <span class="text-success">{3, 5, 2, 1, 2}</span></li>
+                        <li>12d<span class="text-primary">km</span><span class="text-warning">2</span><span class="text-primary">k</span><span class="text-warning">3</span>: Supondo o mesmo resultado de antes (<span class="text-success">{3, 5, 10, 15, 2, 1, 6, 8, 2, 20, 9, 19}</span>), manterá apenas os <strong>2 menores</strong> e os <strong>3 maiores</strong>, ou seja, <span class="text-success">{15, 2, 1, 20, 19}</span></li>
+                    </ul>
+                    <h6>Por padrão, se não for escrito o número, será considerado 1.</h6>
+                    <p>Exemplos:</p>
+                    <ul>
+                        <li>15d24<span class="text-primary">k</span> = 15d24<span class="text-primary">k</span><span class="text-warning">1</span></li>
+                        <li>5d4<span class="text-primary">km</span> = 5d4<span class="text-primary">km</span><span class="text-warning">1</span></li>
+                    </ul>
+                    <h5 class="text-warning">Incompatível com dados explosivos por gerar ambiguidades demais.</h5>
+                </div>
+
+                
+
+                <div class="col-lg-6 box-separator">
+                    <h2 class="text-center">Intervalos</h2>
+                    <p>Apenas os números no intervalo determinado são mantidos.</p>
+                    <p>Sintaxe:</p>
+                    <ul>
+                        <li><span class="text-primary">&lt&lt</span>: Mantém apenas os números menores ou iguais ao solicitado, o resto descarta.</li>
+                        <li><span class="text-primary">&gt&gt</span>: Mantém apenas os números maiores ou iguais ao solicitado, o resto descarta.</li>
+                    </ul>
+                    <p>Exemplos:</p>
+                    <ul>
+                        <li>12d30<span class="text-primary">&lt&lt</span><span class="text-warning">25</span>: Mantém apenas os números menores ou iguais a 25, o resto descarta.</li>
+                        <li>12d10<span class="text-primary">&gt&gt</span><span class="text-warning">5</span>: Mantém apenas os números maiores ou iguais a 5, o resto descarta.</li>
+                        <li>12d50<span class="text-primary">&lt&lt</span><span class="text-warning">35</span><span class="text-primary">&gt&gt</span><span class="text-warning">10</span>: Mantém apenas os números entre 10 e 35, o resto descarta.</li>
+                    </ul>
+                    <h6>Por padrão, se não for escrito o número, será considerada a metade do número máximo do dado.</h6>
+                    <p>Exemplos:</p>
+                    <ul>
+                        <li>6d32<span class="text-primary">&gt&gt</span> = 6d32<span class="text-primary">&gt&gt</span><span class="text-warning">16</span></li>
+                        <li>8d42<span class="text-primary">&lt&lt</span> = 8d42<span class="text-primary">&lt&lt</span><span class="text-warning">21</span></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-6 box-separator">
+                    <h2 class="text-center">Operadores em massa</h2>
+                    <p>Executam uma determinada expressão matemática em cada uma das rolagens.</p>
+                    <h5 class="text-warning">As expressões dos operadores em massa funcionam da esquerda para a direita, independentemente da ordem de prioridades da matemática. Isso é uma escolha de design para evitar complicar os dados tendo que colocar parênteses no meio deles.</h5>
+
+                    <p>Sintaxe:</p>
+                    <ul>
+                        <li><span class="text-primary">++</span>: Soma o número determinado em todos os dados.</li>
+                        <li><span class="text-primary">--</span>: Subtrai o número determinado de todos os dados.</li>
+                        <li><span class="text-primary">**</span>: Multiplica todos os dados pelo número determinado.</li>
+                        <li><span class="text-primary">//</span>: Divide todos os dados pelo número determinado.</li>
+                        <li><span class="text-primary">%%</span>: Calcula o resto da divisão pelo número determinado. (sinceramente, quem que vai usar isso na vida?)</li>
+                    </ul>
+                    <p>Exemplos:</p>
+                    <ul>
+                        <li>23d22<span class="text-primary">++</span><span class="text-warning">6</span>: Soma 6 em cada um dos dados.</li>
+                        <li>2d2<span class="text-primary">--</span><span class="text-warning">4</span><span class="text-primary">**</span><span class="text-warning">8</span>: Subtrai 4 e <strong>depois</strong> multiplica por 8 cada um dos dados.</li>
+                        <li>2d2<span class="text-primary">**</span><span class="text-warning">8</span><span class="text-primary">--</span><span class="text-warning">4</span>: Multiplica por 8 e <strong>depois</strong> subtrai 4 em cada um dos dados.</li>
+                    </ul>
+                </div>
+
+            </div>
+            <br>
+            <div class="box-separator">
+                <h2 class="text-center">Expressões numéricas</h2>
+                <p>E claro, não poderiam faltar, expressões numéricas!</p>
+                <p>Essas funcionam exatamente como você aprendeu na escola. A expressão <span class="text-success">(5 + 10 * 8) / (10 - 15)</span> resultará em -17. Mas claro, nosso dado não é apenas uma calculadora.</p>
+                <p>Operadors permitidos:</p>
+                    <ul>
+                        <li><span class="text-primary">+</span>: Soma.</li>
+                        <li><span class="text-primary">-</span>: Subtrai.</li>
+                        <li><span class="text-primary">*</span>: Multiplica.</li>
+                        <li><span class="text-primary">/</span>: Divide.</li>
+                        <li><span class="text-primary">%</span>: Calcula o resto da divisão. (ainda quero saber quem que vai usar isso na vida)</li>
+                        <li><span class="text-primary">()</span>: Muda a ordem de procedência da expressão</li>
+                        
+                    </ul>
+                <p>Exemplos:</p>
+                <ul>
+                    <li>23d20<span class="text-primary">+</span>3: Soma 3 ao resultado dos dados.</li>
+                    <li>5d3<span class="text-primary">+</span>33d4<span class="text-primary">*</span>3d10: Multiplica o resultado de 3d10 com o resultado de 33d4, depois soma ao de 5d3.</li>
+                </ul>
+            </div>
+        </div>
+       
+    </body>
+</html>

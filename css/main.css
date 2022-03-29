@@ -1,0 +1,76 @@
+button:hover {
+    transform: translateY(-10px) scale(1.05);
+    transition: 0.2s;
+}
+button {
+    transform: translateY(0px) scale(1);
+    transition: 0.2s;
+}
+
+.size-up-anim:hover {
+    transform: translateY(-10px) scale(1.05);
+    transition: 0.2s;
+}
+.size-up-anim {
+    transform: translateY(0px) scale(1);
+    transition: 0.2s;
+}
+
+.background {
+    background-color: #1d1f25;
+}
+.info-block {
+    width: 95vw;
+    background-color: #242731;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.text-white-kraken {
+    color: #E6E6E6;
+}
+.nav-link.text-white-kraken:hover {
+    color: #C6C6C6;
+}
+.nav-link.text-white-kraken:focus {
+    color: #f80752;
+}
+.box-separator {
+    padding: 20px 40px;
+}
+.nav {
+    background-color: #242731;
+}
+.nav-link.active.bg-white-kraken {
+    background-color: #E6E6E6;
+}
+.nav-item {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.team-card {
+    max-width: 14rem;
+    width: 35vw;
+    margin-top: 40px;
+    padding: 13px;
+}
+.premium-icon {
+    margin: 0% 42.5%;
+    width: auto;
+}
+.premium-wrapper {
+    margin: 0% 5%;
+}
+.bg-kraken-dark {
+    background-color: #242731;
+}
+.rounded-20 {
+    border-radius: 20px;
+}
+.premium-card {
+    min-height: 630px;
+}
+.size-keeper {
+    height: 48px;
+}
