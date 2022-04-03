@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini-kraken bot</title>
+    <title>Mini-kraken</title>
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/scss/custom.css"/>
     <link rel="stylesheet" href="/css/main.css"/>
+    <link rel="stylesheet" href="/node_modules/aos/dist/aos.css"/>
     <link rel="icon" href="/img/logo5.png">
 </head>
-<body class="background" style="margin-top: 100px;">
+<body class="background" style="margin-top: 300px;">
     <!--Navbar start-->
     <div class="fixed-top">
-        <nav class="shadow-lg navbar navbar-expand-lg navbar-dark bg-kraken-dark">
-            <div class="container-fluid">
+        <nav class="shadow-lg navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid z-index-10 position-relative">
                 <a class="me-auto navbar-brand" href="/">
-                    <img src="/img/logo5.png" alt="Mini-kraken" height="40">
+                    <img src="/img/logo6.png" alt="Mini-kraken" height="40">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -25,7 +26,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/premium">Premium</a>
+                        <a class="nav-link text-primary" href="/premium">Premium</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/equipe">Equipe</a>
@@ -37,7 +38,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Documentação
                         </a>
-                        <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                        <ul class="dropdown-menu bg-kraken-dark" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item text-white-kraken" href="/docs/dados">Dados</a></li>
                             <li><a class="dropdown-item text-white-kraken" href="/docs/comandos">Comandos</a></li>
                             <li><hr class="dropdown-divider"></li>
@@ -46,7 +47,12 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white-kraken" href="javascript:void(0)"><button type="button" onclick="window.open('https:\/\/discord.com/api/oauth2/authorize?client_id=899421595125288961&permissions=8&scope=bot%20applications.commands', 'Adicionar bot', 'width=800, height=600')" class="btn btn-primary"><strong>Me Adicione!</strong></button></a>
+                        <a class="nav-link text-white-kraken" href="javascript:void(0)">
+                            <button type="button" onclick="window.open('https:\/\/discord.com/api/oauth2/authorize?client_id=899421595125288961&permissions=8&scope=bot%20applications.commands', 'Adicionar bot', 'width=800, height=600')" class="btn btn-primary transparent-bg rounded-pill border-0">
+                                <img src="/img/kraken-bg.png" alt="fundo" class="position-absolute z-index--1 transform-pos-anim" height="400" width="400">
+                                <strong>Me Adicione!</strong>
+                            </button>
+                        </a>
                     </li>
                     </ul>
                 </div>
@@ -54,5 +60,54 @@
         </nav>
     </div>
     <!--Navbar end-->
+    <!--Kraken logo-->
+    <div data-aos="fade-up" class="position-fixed start-50 mt--200 translate-middle-x text-nuku w-100">
+
+        <h1 class="text-primary text-center">O KRAKEN RESSURGE</h1>
+        <h2 class="text-primary text-center">AGORA PARA ROLAR SEUS DADOS</h2>
+        <img src="/img/logo5.png" alt="Mini-kraken" class="position-relative start-50 translate-middle-x" height="120">
+    </div>
+    <!--Kraken logo end-->
+
+    <!--Features-->
+    <div class="z-index-100 position-relative nuvem text-white-kraken">
+        <h1 class="text-nuku text-center mt-5">Funcionalidades do Mini-Kraken</h1>
+        <h3 class="text-nuku text-center">um Verdadeiro Upgrade no seu RPG de Mesa</h3>
+        <div class="row gx-2 text-nuku w-75 position-relative start-50 translate-middle-x">
+            <div class="col-xl-4 my-3">
+                <div class=" card size-up-anim bg-kraken-dark p-2 rounded-20 border-primary border-4">
+                    <img src="/img/reshot-icon-helm-RVXLGYC8UM.svg" class="card-img-top" height="70" alt="Capacete">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">FICHAS NO BOT</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 my-3">
+                <div class="card size-up-anim bg-kraken-dark p-2 rounded-20 border-primary border-4">
+                    <img src="/img/reshot-icon-dice-MEN75AHX42.svg" class="card-img-top" height="70" alt="Dados">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">DADOS INTELIGENTES</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 my-3">
+                <div class="card size-up-anim bg-kraken-dark p-2 rounded-20 border-primary border-4">
+                    <img src="/img/reshot-icon-flail-UCK5MG9DY6.svg" class="card-img-top" height="70" alt="Bola de espinhos">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">DADOS MACRO</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Features end-->
 </body>
 </html>
+<script src="/node_modules/aos/dist/aos.js"></script>
+<script>
+    AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+    });
+</script>
+
