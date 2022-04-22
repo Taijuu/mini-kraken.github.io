@@ -1,8 +1,8 @@
-button:hover {
+.button:hover {
     transform: translateY(-10px) scale(1.05);
     transition: 0.2s;
 }
-button {
+.button {
     transform: translateY(0px) scale(1);
     transition: 0.2s;
 }

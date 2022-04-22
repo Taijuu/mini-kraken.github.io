@@ -60,7 +60,8 @@
   background-color: var(--dl-color-primary-100);
 }
 .index-link:hover {
-  color: var(--dl-color-gray-dark);
+  color: var(--dl-color-primary-100);
+  font-size: 25px;
   background-color: var(--dl-color-gray-black);
 }
 .index-link1 {
@@ -76,7 +77,7 @@
   text-decoration: none;
 }
 .index-link1:hover {
-  border-color: var(--dl-color-gray-black);
+  border-color: var(--dl-color-primary-100);
 }
 .index-image {
   width: 338px;
@@ -245,7 +246,15 @@
   font-weight: 500;
 }
 @media(max-width: 991px) {
+  .index-container {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background-color: var(--dl-color-primary-null);
+  }
   .index-home {
+    height: 712px;
+    padding-top: 121px;
     flex-direction: column;
   }
   .index-container1 {
@@ -261,6 +270,9 @@
     text-align: center;
     padding-left: var(--dl-space-space-threeunits);
     padding-right: var(--dl-space-space-threeunits);
+  }
+  .index-features {
+    height: 412px;
   }
   .index-text11 {
     text-align: center;

@@ -1,136 +1,118 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="background">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium</title>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/scss/custom.css"/>
-    <link rel="stylesheet" href="/css/main.css"/>
-    <link rel="icon" href="/img/logo5.png">
-</head>
-<body class="background" style="margin-top: 82px;">
-    <!--Navbar start-->
-    <div class="fixed-top">
-        <nav class="shadow-lg navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid z-index-10 position-relative">
-                <a class="me-auto navbar-brand" href="/">
-                    <img src="/img/logo6.png" alt="Mini-kraken" height="40">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-primary" href="/premium">Premium</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/equipe">Equipe</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://discord.gg/a6BaUvYeY3" target="_blank">Guilda de suporte</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Documentação
-                        </a>
-                        <ul class="dropdown-menu bg-kraken-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item text-white-kraken" href="/docs/dados">Dados</a></li>
-                            <li><a class="dropdown-item text-white-kraken" href="/docs/comandos">Comandos</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item text-white-kraken" href="/docs/terms-of-service.pdf">Termos de serviço</a></li>
-                            <li><a class="dropdown-item text-white-kraken" href="/docs/privacy-policy.pdf">Política de privacidade</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white-kraken" href="javascript:void(0)">
-                            <button type="button" onclick="window.open('https:\/\/discord.com/api/oauth2/authorize?client_id=899421595125288961&permissions=8&scope=bot%20applications.commands', 'Adicionar bot', 'width=800, height=600')" class="btn btn-primary transparent-bg rounded-pill border-0">
-                                <img src="/img/kraken-bg.png" alt="fundo" class="position-absolute z-index--1 transform-pos-anim" height="400" width="400">
-                                <strong>Me Adicione!</strong>
-                            </button>
-                        </a>
-                    </li>
-                    </ul>
-                </div>
+
+<html lang="en">
+  <head>
+    <title>premium - MiniKraken</title>
+    <meta property="og:title" content="premium - MiniKraken" />
+    <meta
+      property="og:image"
+      content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/80dc8d62-6985-4b85-b7d6-702918ef4666/f35273c3-ab34-477d-a14c-dcbcbefd9532?org_if_sml=1"
+    />
+    <meta property="og:title" content="MiniKraken" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <style>
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6 {  margin: 0;  padding: 0;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}
+    </style>
+    <style>
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-dark);
+
+      }
+    </style>
+    <link
+      rel="shortcut icon"
+      href="/playground_assets/logo51.png"
+      type="icon/png"
+      sizes="32x32"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <link href="./premium.css" rel="stylesheet" />
+
+      <div class="premium-container">
+        <div class="premium-pricing">
+          <div class="premium-container1">
+            <div class="premium-container2">
+              <h1>Pricing Plans</h1>
+              <span class="premium-text01">
+                <span>
+                  <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                    lorem lorem, malesuada in metus vitae, scelerisque accumsan
+                    ipsum.
+                  </span>
+                  <span></span>
+                </span>
+              </span>
             </div>
-        </nav>
+            <div class="premium-container3">
+              <div class="premium-container4">
+                <span class="premium-text05">DEV</span>
+                <span class="premium-text06">$0</span>
+                <span class="premium-text07">
+                  <span class="premium-text08">10</span>
+                  <span>Projects</span>
+                </span>
+                <span class="premium-text10">
+                  <span class="premium-text11">99</span>
+                  <span>Components</span>
+                </span>
+                <span class="premium-text13">
+                  <span class="premium-text14">3</span>
+                  <span>Collaborators</span>
+                </span>
+                <span class="premium-text16">
+                  <span class="premium-text17">Public projects</span>
+                </span>
+                <button class="premium-button button">Learn More</button>
+              </div>
+              <div class="premium-container5">
+                <span class="premium-text18">DEV</span>
+                <span class="premium-text19">$29</span>
+                <span class="premium-text20">
+                  <span class="premium-text21">100</span>
+                  <span>Projects</span>
+                </span>
+                <span class="premium-text23">
+                  <span class="premium-text24">1000</span>
+                  <span>Components</span>
+                </span>
+                <span class="premium-text26">
+                  <span class="premium-text27">20</span>
+                  <span>Collaborators</span>
+                </span>
+                <span class="premium-text29">
+                  <span class="premium-text30">Private projects</span>
+                </span>
+                <button class="premium-button1 button">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="premium-pricing1"></div>
+      </div>
     </div>
-    <!--Navbar end-->
-    <div class="row premium-wrapper text-white-kraken">
-        <div class="col-xl-4 my-3" style="transform:scale(0.9)">
-            <div class="card size-up-anim bg-kraken-dark p-2 rounded-20 premium-card">
-                <img src="/img/Asset_3.svg" class="card-img-top premium-icon" alt="Coroa 2">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Premium Solo</h5>
-                    <h6 class="card-title text-center">R$ 5,00 ao mês</h6>
-                    <ul class="card-text mb-3">
-                        <li>Ajuda a Kraken-Chan a se manter online;</li>
-                        <li>Acesso a todos os comandos Premium do bot para seu usuário;</li>
-                        <li>Cargo de doador no nosso servidor de suporte;</li>
-                        <li>Eventos para doadores;</li>
-                        <li>Suas sugestões terão prioridade;</li>
-                        <li>Acesso ao chat de spoilers de novos updates do bot;
-                        <li>Acesso a funções de teste do bot;</li>
-                        <li>Nossa eterna gratidão.</li>
-                    </ul>
-                    <div class="size-keeper"></div>
-                    <div class="position-absolute mb-4 bottom-0 w-75 start-50 translate-middle-x">
-                        <button class="btn btn-primary w-100" type="button"><strong>Comprar</strong></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-4 my-3">
-            <div class="card size-up-anim bg-kraken-dark p-2 rounded-20 premium-card">
-                <img src="/img/Asset_2.svg" class="card-img-top premium-icon" alt="Coroa 3">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Premium Guilda</h5>
-                    <h6 class="card-title text-center">R$ 7,00 ao mês</h6>
-                    <ul class="card-text mb-3">
-                        <li>Ajuda a Kraken-Chan a se manter online;</li>
-                        <strong><li class="text-warning">Acesso a todos os comandos Premium do bot para todos os membros no servidor;</li></strong>
-                        <li>Cargo de doador no nosso servidor de suporte;</li>
-                        <li>Eventos para doadores;</li>
-                        <li>Suas sugestões terão prioridade;</li>
-                        <strong><li class="text-warning">Permissão para divulgar sua campanha de RPG em nosso servidor de suporte;</li></strong>
-                        <li>Acesso ao chat de spoilers de novos updates do bot;
-                        <li>Acesso a funções de teste do bot;</li>
-                        <li>Nossa eterna gratidão.</li>
-                    </ul>
-                    <div class="size-keeper"></div>
-                    <div class="position-absolute mb-4 bottom-0 w-75 start-50 translate-middle-x">
-                        <button class="btn btn-primary w-100" type="button"><strong>Comprar</strong></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-4 my-3" style="transform:scale(0.9)">
-            <div class="card size-up-anim bg-kraken-dark p-2 rounded-20 premium-card">
-                <img src="/img/Asset_1.svg" class="card-img-top premium-icon" alt="Coroa 1">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Premium Tentacle</h5>
-                    <h6 class="card-title text-center">R$ 15,00 ao mês</h6>
-                    <ul class="card-text mb-3">
-                        <strong><li class="text-warning">Todos os benefícios anteriores;</li></strong>
-                        <li class="text-warning">Ajuda <strong>muito</strong> a Kraken-Chan a se manter online ❤;</li>
-                        <strong><li class="text-warning">Acesso a todos os comandos Premium do bot para todos os membros de todos os servidores que você é dono;</li></strong>
-                        <strong><li class="text-warning">Cargo exclusivo no servidor de suporte além do de doadores;</li></strong>
-                        <strong><li class="text-warning">Pack do pé do C.E.O. do projeto (QuiraDon);</li></strong>
-                        <!--<strong><li class="text-warning">Caso deseje poderá jogar minecraft conosco;</li></strong>-->
-                        <strong><li class="text-warning">Pode chamar os desenvolvedores de vagabundos se o bot ficar mais de um mês sem update;</li></strong>
-                        <li>Nossa eterna gratidão, afinal, são vocês que tornam o Mini-Kraken possível.</li>
-                    </ul>
-                    <div class="size-keeper"></div>
-                    <div class="position-absolute mb-4 bottom-0 w-75 start-50 translate-middle-x">
-                        <button class="btn btn-primary w-100" type="button"><strong>Comprar</strong></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-</body>
+  </body>
 </html>

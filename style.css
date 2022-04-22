@@ -5,9 +5,6 @@
   --dl-color-gray-dark: #111316ff;
   --dl-size-size-large: 144px;
   --dl-size-size-small: 48px;
-  --dl-color-danger-300: #A22020;
-  --dl-color-danger-500: #BF2626;
-  --dl-color-danger-700: #E14747;
   --dl-color-gray-black: #e6e6e6ff;
   --dl-size-size-medium: 96px;
   --dl-size-size-xlarge: 192px;
@@ -17,9 +14,6 @@
   --dl-color-primary-300: #0074F0;
   --dl-color-primary-500: #14A9FF;
   --dl-color-primary-700: #85DCFF;
-  --dl-color-success-300: #199033;
-  --dl-color-success-500: #32A94C;
-  --dl-color-success-700: #4CC366;
   --dl-size-size-xxlarge: 288px;
   --dl-color-primary-null: transparent;
   --dl-size-size-maxwidth: 1400px;
@@ -39,11 +33,11 @@
   color: var(--dl-color-gray-black);
   display: inline-block;
   padding: 0.5rem 1rem;
-  border-color: var(--dl-color-gray-black);
   border-width: 1px;
   border-radius: 4px;
   background-color: var(--dl-color-gray-dark);
 }
+
 .input {
   color: var(--dl-color-gray-black);
   cursor: auto;
@@ -75,6 +69,10 @@
 }
 .teleport-show {
   display: flex !important;
+}
+
+.anim-up:hover {
+  transform: translateY(-10px) scale(1.05);
 }
 .heading {
   font-size: 32px;
