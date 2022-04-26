@@ -18,6 +18,7 @@
   --dl-color-primary-null: transparent;
   --dl-size-size-maxwidth: 1400px;
   --dl-radius-radius-round: 50%;
+  --dl-color-primary-yellow: #ffc107ff;
   --dl-space-space-halfunit: 8px;
   --dl-space-space-sixunits: 96px;
   --dl-space-space-twounits: 32px;
@@ -26,6 +27,7 @@
   --dl-radius-radius-radius8: 8px;
   --dl-space-space-fiveunits: 80px;
   --dl-space-space-fourunits: 64px;
+  --dl-radius-radius-radius81: 100;
   --dl-space-space-threeunits: 48px;
   --dl-space-space-oneandhalfunits: 24px;
 }
