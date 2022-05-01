@@ -1,11 +1,10 @@
 :root {
-  --dl-color-gray-500: #595959;
-  --dl-color-gray-700: #999999;
-  --dl-color-gray-900: #D9D9D9;
-  --dl-color-gray-dark: #111316ff;
+  --dl-color-back-500: #595959;
+  --dl-color-back-700: #999999;
+  --dl-color-back-dark: #111316ff;
   --dl-size-size-large: 144px;
   --dl-size-size-small: 48px;
-  --dl-color-gray-black: #e6e6e6ff;
+  --dl-color-back-black: #e6e6e6ff;
   --dl-size-size-medium: 96px;
   --dl-size-size-xlarge: 192px;
   --dl-size-size-xsmall: 16px;
@@ -32,31 +31,31 @@
   --dl-space-space-oneandhalfunits: 24px;
 }
 .button {
-  color: var(--dl-color-gray-black);
+  color: var(--dl-color-back-black);
   display: inline-block;
   padding: 0.5rem 1rem;
   border-width: 1px;
   border-radius: 4px;
-  background-color: var(--dl-color-gray-dark);
+  background-color: var(--dl-color-back-dark);
 }
 
 .input {
-  color: var(--dl-color-gray-black);
+  color: var(--dl-color-back-black);
   cursor: auto;
   padding: 0.5rem 1rem;
-  border-color: var(--dl-color-gray-black);
+  border-color: var(--dl-color-back-black);
   border-width: 1px;
   border-radius: 4px;
-  background-color: var(--dl-color-gray-dark);
+  background-color: var(--dl-color-back-dark);
 }
 .textarea {
-  color: var(--dl-color-gray-black);
+  color: var(--dl-color-back-black);
   cursor: auto;
   padding: 0.5rem;
-  border-color: var(--dl-color-gray-black);
+  border-color: var(--dl-color-back-black);
   border-width: 1px;
   border-radius: 4px;
-  background-color: var(--dl-color-gray-dark);
+  background-color: var(--dl-color-back-dark);
 }
 .list {
   width: 100%;
