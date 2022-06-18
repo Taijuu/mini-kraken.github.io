@@ -1,14 +1,16 @@
 :root {
   --dl-color-back-500: #595959;
   --dl-color-back-700: #999999;
-  --dl-color-back-dark: #111316ff;
+  --dl-color-back-dark: #09090cff;
   --dl-size-size-large: 144px;
   --dl-size-size-small: 48px;
   --dl-color-back-black: #e6e6e6ff;
+  --dl-color-back-dark2: #111316ff;
   --dl-size-size-medium: 96px;
   --dl-size-size-xlarge: 192px;
   --dl-size-size-xsmall: 16px;
   --dl-space-space-unit: 16px;
+  --dl-color-back-black3: #07070aff;
   --dl-color-primary-100: #f80752ff;
   --dl-color-primary-300: #0074F0;
   --dl-color-primary-500: #14A9FF;

@@ -1,25 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="background">
-<head>
-  <title>Mini Kraken</title>
-  <meta content="Mini Kraken" property="og:title" />
-  <meta content="Conheça Inanimalia Fortuna Tenebris Verteri, Una ou Mini Kraken, um bot de rpg de mesa para o discord." property="og:description" />
-  <meta content="https://mini-kraken.github.io" property="og:url" />
-  <meta content="https://mini-kraken.github.io/img/wp1.png" property="og:image" />
-  <meta content="#f80752" data-react-helmet="true" name="theme-color" />
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/scss/custom.css"/>
-    <link rel="stylesheet" href="/css/main.css"/>
-    <link rel="stylesheet" href="/node_modules/aos/dist/aos.css"/>
-    <link rel="icon" href="/img/logo5.png">
-    <style>
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6 {  margin: 0;  padding: 0;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}
+
+<html lang="en">
+  <head>
+    <title>MiniKraken</title>
+    <meta property="og:title" content="MiniKraken" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6 {  margin: 0;  padding: 0;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
     </style>
-    <style>
+    <style data-tag="default-style-sheet">
       html {
         font-family: Inter;
         font-size: 16px;
@@ -38,225 +30,268 @@
       }
     </style>
     <link
-      rel="shortcut icon"
-      href="/playground_assets/logo51.png"
-      type="icon/png"
-      sizes="32x32"
-    />
-    <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      data-tag="font"
     />
-</style>
-<link rel="stylesheet" href="./style.css" />
-</head>
-<body>
-  <body class="background" style="margin-top: 100px;"></body>
-    <!--Navbar start-->
-    <div class="fixed-top">
-      <nav class="shadow-lg navbar navbar-expand-lg navbar-dark">
-          <div class="container-fluid z-index-10 position-relative">
-              <a class="me-auto navbar-brand" href="/">
-                  <img src="/img/logo6.png" alt="Mini-kraken" height="40">
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                  <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link text-primary" href="/premium">Premium</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="/equipe">Equipe</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="https://discord.gg/a6BaUvYeY3" target="_blank">Guilda de suporte</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Documentação
-                      </a>
-                      <ul class="dropdown-menu bg-kraken-dark" aria-labelledby="navbarDropdownMenuLink">
-                          <li><a class="dropdown-item text-white-kraken" href="/docs/dados">Dados</a></li>
-                          <li><a class="dropdown-item text-white-kraken" href="/docs/comandos">Comandos</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item text-white-kraken" href="/docs/terms-of-service.pdf">Termos de serviço</a></li>
-                          <li><a class="dropdown-item text-white-kraken" href="/docs/privacy-policy.pdf">Política de privacidade</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-white-kraken" href="javascript:void(0)">
-                          <button type="button" onclick="window.open('https:\/\/discord.com/api/oauth2/authorize?client_id=899421595125288961&permissions=8&scope=bot%20applications.commands', 'Adicionar bot', 'width=800, height=600')" class="btn btn-primary transparent-bg rounded-pill border-0">
-                              <img src="/img/kraken-bg.png" alt="fundo" class="position-absolute z-index--1 transform-pos-anim" height="400" width="400">
-                              <strong>Me Adicione!</strong>
-                          </button>
-                      </a>
-                  </li>
-                  </ul>
-              </div>
-          </div>
-      </nav>
-  </div>
-  <!--Navbar end-->
-  <div>
-    <link href="./index.css" rel="stylesheet" />
-    <div class="index-container">
-      <div class="index-home">
-        <div class="index-container1">
-          <h1 class="index-text">
-            <span>Conheça Fortuna, o Mini Kraken</span>
-            <br />
-            <span></span>
-            <br />
-            <span></span>
-          </h1>
-          <p class="index-text06">
-            <span>
-              <span class="index-text08">
-                O Kraken ressurge, agora para rolar os seus dados. Conheça
-                Inanimalia Fortuna Tenebris Verteri um Bot que vai auxiliar no
-                seu RPG de mesa.
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="index-container">
+        <div class="index-home">
+          <div class="index-container1">
+            <h1 class="index-text">
+              <span>Conheça Fortuna, o Mini Kraken</span>
+              <br />
+              <span></span>
+              <br />
+              <span></span>
+            </h1>
+            <p class="index-text06">
+              <span>
+                <span class="index-text08">
+                  O Kraken ressurge, agora para rolar os seus dados. Conheça
+                  Inanimalia Fortuna Tenebris Verteri um Bot que vai auxiliar no
+                  seu RPG de mesa.
+                </span>
               </span>
-            </span>
-            <span><span></span></span>
-          </p>
-          <div class="index-btn-group">
-            <a href="/invite" class="index-link button">Adicionar Bot</a>
-            <a href="/docs/dados" class="index-link1 button">Documentação</a>
-          </div>
-        </div>
-        <img
-          alt="image"
-          src="public/playground_assets/logo5-400h.png"
-          class="index-image"
-        />
-      </div>
-      <div class="index-functions">
-        <div class="index-features">
-          <h1 class="index-text11">
-            <span>Explore as funções</span>
-            <br />
-            <span></span>
-          </h1>
-          <p class="index-text14">
-            <span>
-              O Mini Kraken é um Bot do discord que conta com diversas
-              funcionalidades, com o objetivo de Auxiliar o seu rpg de mesa.
-            </span>
-          </p>
-          <div class="index-container2">
-            <div class="index-feature-card anim-up">
-              <img
-                alt="image"
-                src="public/playground_assets/mass.svg"
-                class="index-image1"
-              />
-              <h2 class="index-text16">Sistema de Vida</h2>
-              <p class="index-text17">
-                Calcular vida normalmente é chato, resolvemos o problema com o
-                /hp
-              </p>
-              <span class="index-text18">Ver mais</span>
-            </div>
-            <div class="index-feature-card1 anim-up">
-              <img
-                alt="image"
-                src="public/playground_assets/head.svg"
-                class="index-image2"
-              />
-              <h2 class="index-text19">Fichas Inteligentes</h2>
-              <p class="index-text20">
-                Salve os seus modificadores e role testes automaticamente
-              </p>
-              <p class="index-text21">Ver mais</p>
-            </div>
-            <div class="index-feature-card2 anim-up">
-              <img
-                alt="image"
-                src="public/playground_assets/dice.svg"
-                class="index-image3"
-              />
-              <h2 class="index-text22">Sistema de Dados</h2>
-              <p class="index-text23">
-                A Fortuna conta com um complexo sistema de rolagem de dados,
-                que permitem diversos combos
-              </p>
+              <span><span></span></span>
+            </p>
+            <div class="index-btn-group">
+              <a href="https://test" class="index-link button">Adicionar Bot</a>
               <a
-                href="https://mini-kraken.github.io/docs/dados"
+                href="https://test"
                 target="_blank"
                 rel="noreferrer noopener"
-                class="index-link2"
+                class="index-link01 button"
               >
-                <p class="index-text24">Ver mais</p>
+                Documentação
               </a>
             </div>
-            <div class="index-feature-card3 anim-up">
-              <img
-                alt="image"
-                src="public/playground_assets/axe.svg"
-                class="index-image4"
-              />
-              <h2 class="index-text25">Dados Macros</h2>
-              <p class="index-text26">
-                Rodar seu combo nunca foi tão fácil com os dados macros basta
-                salvar o combo e rodar com um unico click
-              </p>
-              <p class="index-text27">Ver mais</p>
+          </div>
+          <img
+            alt="image"
+            src="public/playground_assets/logo5-400h.png"
+            class="index-image"
+          />
+        </div>
+        <div class="index-functions">
+          <div class="index-features">
+            <h1 class="index-text11">
+              <span>Explore as funções</span>
+              <br />
+              <span></span>
+            </h1>
+            <p class="index-text14">
+              <span>
+                O Mini Kraken é um Bot do discord que conta com diversas
+                funcionalidades, com o objetivo de Auxiliar o seu rpg de mesa.
+              </span>
+            </p>
+            <div class="index-container2">
+              <div class="index-feature-card anim-up">
+                <img
+                  alt="image"
+                  src="public/playground_assets/mass.svg"
+                  class="index-image01"
+                />
+                <h2 class="index-text16">Sistema de Vida</h2>
+                <p class="index-text17">
+                  Calcular vida normalmente é chato, resolvemos o problema com o
+                  /hp
+                </p>
+                <a
+                  href="https://mini-kraken.github.io/docs/dados"
+                  class="index-link02"
+                >
+                  Ver mais
+                </a>
+              </div>
+              <div class="index-feature-card1 anim-up">
+                <img
+                  alt="image"
+                  src="public/playground_assets/head.svg"
+                  class="index-image02"
+                />
+                <h2 class="index-text18">Fichas Inteligentes</h2>
+                <p class="index-text19">
+                  Salve os seus modificadores e role testes automaticamente
+                </p>
+                <a
+                  href="https://mini-kraken.github.io/docs/dados"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="index-link03"
+                >
+                  <p class="index-text20">Ver mais</p>
+                </a>
+              </div>
+              <div class="index-feature-card2 anim-up">
+                <img
+                  alt="image"
+                  src="public/playground_assets/dice.svg"
+                  class="index-image03"
+                />
+                <h2 class="index-text21">Sistema de Dados</h2>
+                <p class="index-text22">
+                  A Fortuna conta com um complexo sistema de rolagem de dados,
+                  que permitem diversos combos
+                </p>
+                <a
+                  href="https://mini-kraken.github.io/docs/dados"
+                  class="index-link04"
+                >
+                  <p class="index-text23">Ver mais</p>
+                </a>
+              </div>
+              <div class="index-feature-card3 anim-up">
+                <img
+                  alt="image"
+                  src="public/playground_assets/axe.svg"
+                  class="index-image04"
+                />
+                <h2 class="index-text24">Dados Macros</h2>
+                <p class="index-text25">
+                  Rodar seu combo nunca foi tão fácil com os dados macros basta
+                  salvar o combo e rodar com um unico click
+                </p>
+                <a
+                  href="https://mini-kraken.github.io/docs/dados"
+                  class="index-link05"
+                >
+                  <p class="index-text26">Ver mais</p>
+                </a>
+              </div>
+              <div class="index-feature-card4 anim-up">
+                <img
+                  alt="image"
+                  src="public/playground_assets/wiki.svg"
+                  class="index-image05"
+                />
+                <h2 class="index-text27">Wiki da Comunidade</h2>
+                <p class="index-text28">
+                  Crie e Use items feitos por outros membros do Mini Kraken em
+                  sua campanha de RPG
+                </p>
+                <a
+                  href="https://mini-kraken.github.io/docs/dados"
+                  class="index-link06"
+                >
+                  <p class="index-text29">Ver mais</p>
+                </a>
+              </div>
+              <div class="index-feature-card5 anim-up">
+                <img
+                  alt="image"
+                  src="public/playground_assets/lamp_icon.svg"
+                  class="index-image06"
+                />
+                <h2 class="index-text30">Players em Passe de Magica</h2>
+                <p class="index-text31">
+                  Invoque aventureiros para suas aventuras com o /enviar
+                  campanha
+                </p>
+                <a
+                  href="https://mini-kraken.github.io/docs/dados"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="index-link07"
+                >
+                  <p class="index-text32">Ver mais</p>
+                </a>
+              </div>
+              <div class="index-feature-card6 anim-up">
+                <img
+                  alt="image"
+                  src="public/playground_assets/null.svg"
+                  class="index-image07"
+                />
+                <h2 class="index-text33">Novidades em Breve</h2>
+                <p class="index-text34">
+                  Ainda estamos Preparando coisas novas para você
+                </p>
+                <a
+                  href="https://mini-kraken.github.io/docs/dados"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="index-link08"
+                >
+                  <p class="index-text35">Ver mais</p>
+                </a>
+              </div>
+              <div class="index-feature-card7 anim-up">
+                <img
+                  alt="image"
+                  src="public/playground_assets/null.svg"
+                  class="index-image08"
+                />
+                <h2 class="index-text36">Novidades em Breve</h2>
+                <p class="index-text37">
+                  Ainda estamos Preparando coisas novas para você
+                </p>
+                <a
+                  href="https://mini-kraken.github.io/docs/dados"
+                  class="index-link09"
+                >
+                  <p class="index-text38">Ver mais</p>
+                </a>
+              </div>
             </div>
-            <div class="index-feature-card4 anim-up">
-              <img
-                alt="image"
-                src="public/playground_assets/wiki.svg"
-                class="index-image5"
-              />
-              <h2 class="index-text28">Wiki da Comunidade</h2>
-              <p class="index-text29">
-                Crie e Use items feitos por outros membros do Mini Kraken em
-                sua campanha de RPG
-              </p>
-              <p class="index-text30">Ver mais</p>
-            </div>
-            <div class="index-feature-card5 anim-up">
-              <img
-                alt="image"
-                src="public/playground_assets/null.svg"
-                class="index-image6"
-              />
-              <h2 class="index-text31">Novidades em Breve</h2>
-              <p class="index-text32">
-                Ainda estamos Preparando coisas novas para você
-              </p>
-              <p class="index-text33">Ver mais</p>
-            </div>
-            <div class="index-feature-card6 anim-up">
-              <img
-                alt="image"
-                src="public/playground_assets/null.svg"
-                class="index-image7"
-              />
-              <h2 class="index-text34">Novidades em Breve</h2>
-              <p class="index-text35">
-                Ainda estamos Preparando coisas novas para você
-              </p>
-              <p class="index-text36">Ver mais</p>
-            </div>
-            <div class="index-feature-card7 anim-up">
-              <img
-                alt="image"
-                src="public/playground_assets/null.svg"
-                class="index-image8"
-              />
-              <h2 class="index-text37">Novidades em Breve</h2>
-              <p class="index-text38">
-                Ainda estamos Preparando coisas novas para você
-              </p>
-              <p class="index-text39">Ver mais</p>
+            <div class="index-features1">
+              <h1 class="index-text39">Estatística</h1>
+              <div class="index-stats">
+                <div class="index-stat">
+                  <h1 class="index-text40"><span>...</span></h1>
+                  <span class="index-text42">Usuários</span>
+                  <span class="index-text43">Usuarios que Usam a UNA</span>
+                </div>
+                <div class="index-stat1">
+                  <h1 class="index-text44"><span>...</span></h1>
+                  <span class="index-text46">Servidores com a una</span>
+                  <span class="index-text47">
+                    Servidores que Possuem a Incrível E Inigualável Una
+                  </span>
+                </div>
+                <div class="index-stat2">
+                  <h1 class="index-text48"><span>...</span></h1>
+                  <span class="index-text50">
+                    <span>Comandos disponíveis</span>
+                  </span>
+                  <span class="index-text52">
+                    Uma verdadeira Caixinha de surpresas
+                  </span>
+                </div>
+                <div class="index-stat3">
+                  <h1 class="index-text53"><span>...</span></h1>
+                  <span class="index-text55">Versão</span>
+                  <span class="index-text56">
+                    Versão Atual que a Una está Rodando
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <footer class="index-footer">
+          <a href="index.html" class="index-navlink">
+            <img
+              alt="logo"
+              src="public/playground_assets/logo61.png"
+              class="index-image09"
+            />
+          </a>
+          <span class="index-text57">
+            <span>© 2022</span>
+            <span>Kraken Team</span>
+            <span></span>
+            <span>, All Rights Reserved.</span>
+          </span>
+        </footer>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
