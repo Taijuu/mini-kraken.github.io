@@ -1,34 +1,21 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <title>MiniKraken</title>
-    <meta property="og:title" content="MiniKraken" />
+    <meta content="Mini Kraken" property="og:title"/>
+    <meta content="Conheça Inanimalia Fortuna Tenebris Verteri, Una ou Mini Kraken, um bot de rpg de mesa para o discord." property="og:description"/>
+    <meta content="https://mini-kraken.github.io/d" property="og:url"/>
+    <meta content="https://mini-kraken.github.io/img/wp1.png" property="og:image"/>
+    <meta content="#f80752" data-react-helmet="true" name="theme-color"/>
+    <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6 {  margin: 0;  padding: 0;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
-    </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
-
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-back-black);
-        background-color: var(--dl-color-back-dark);
-
-      }
-    </style>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/scss/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css"/>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -38,6 +25,50 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <!-- #region navbar-->
+    <nav class="fixed-top w-100 shadow-lg navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid z-index-10 position-relative">
+          <a class="me-auto navbar-brand" href="/">
+              <img src="/img/logo6.png" alt="Mini-kraken" height="40">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link text-primary" href="/premium">Premium</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/equipe">Equipe</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="https://discord.gg/a6BaUvYeY3" target="_blank">Guilda de suporte</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Documentação
+                  </a>
+                  <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item text-secondary" href="/docs/dados">Dados</a></li>
+                      <li><a class="dropdown-item text-secondary" href="/docs/comandos">Comandos</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item text-secondary" href="/docs/terms-of-service.pdf">Termos de serviço</a></li>
+                      <li><a class="dropdown-item text-secondary" href="/docs/privacy-policy.pdf">Política de privacidade</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-secondary size-up-anim" href="javascript:void(0)">
+                      <button type="button" id="addServer" onclick="window.open('https:/\/discord.com/api/oauth2/authorize?client_id=899421595125288961&permissions=8&scope=bot%20applications.commands', 'Adicionar bot', 'width=800, height=600')" class="btn btn-primary transparent-bg rounded-pill border-0">
+                          <strong>Me Adicione!</strong>
+                      </button>
+                  </a>
+              </li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+    <!-- #endregion navbar-->
     <div>
       <link href="./index.css" rel="stylesheet" />
 
@@ -55,19 +86,22 @@
               <span>
                 <span class="index-text08">
                   O Kraken ressurge, agora para rolar os seus dados. Conheça
-                  Inanimalia Fortuna Tenebris Verteri um Bot que vai auxiliar no
+                  Inanimalia Fortuna Tenebris Verteri, um Bot que vai auxiliar no
                   seu RPG de mesa.
                 </span>
               </span>
-              <span><span></span></span>
             </p>
             <div class="index-btn-group">
-              <a href="https://test" class="index-link button">Adicionar Bot</a>
+              <a href="javascipt:void(0)" class="btn btn-primary py-2 px-4 fs-4 rounded-3 size-up-anim">
+                <button class="bg-transparent text-light border-0" onclick="window.open('https:/\/discord.com/api/oauth2/authorize?client_id=899421595125288961&permissions=8&scope=bot%20applications.commands', 'Adicionar bot', 'width=800, height=600')">
+                  Adicionar Bot
+                </button>
+              </a>
               <a
-                href="https://test"
+                href="/docs/comandos"
                 target="_blank"
                 rel="noreferrer noopener"
-                class="index-link01 button"
+                class="btn btn-outline-info ms-4 py-2 px-4 fs-4 rounded-3 size-up-anim"
               >
                 Documentação
               </a>
@@ -105,7 +139,8 @@
                   /hp
                 </p>
                 <a
-                  href="https://mini-kraken.github.io/docs/dados"
+                  href="/docs/comandos#headingHp"
+                  target="_blank"
                   class="index-link02"
                 >
                   Ver mais
@@ -122,7 +157,7 @@
                   Salve os seus modificadores e role testes automaticamente
                 </p>
                 <a
-                  href="https://mini-kraken.github.io/docs/dados"
+                  href="/docs/comandos#rpg-fichas"
                   target="_blank"
                   rel="noreferrer noopener"
                   class="index-link03"
@@ -142,7 +177,8 @@
                   que permitem diversos combos
                 </p>
                 <a
-                  href="https://mini-kraken.github.io/docs/dados"
+                  href="/docs/dados"
+                  target="_blank"
                   class="index-link04"
                 >
                   <p class="index-text23">Ver mais</p>
@@ -160,7 +196,8 @@
                   salvar o combo e rodar com um unico click
                 </p>
                 <a
-                  href="https://mini-kraken.github.io/docs/dados"
+                  href="/docs/comandos#headingDi"
+                  target="_blank"
                   class="index-link05"
                 >
                   <p class="index-text26">Ver mais</p>
@@ -178,7 +215,8 @@
                   sua campanha de RPG
                 </p>
                 <a
-                  href="https://mini-kraken.github.io/docs/dados"
+                  href="/docs/comandos#headingWikiItems"
+                  target="_blank"
                   class="index-link06"
                 >
                   <p class="index-text29">Ver mais</p>
@@ -196,7 +234,7 @@
                   campanha
                 </p>
                 <a
-                  href="https://mini-kraken.github.io/docs/dados"
+                  href="/docs/comandos#headingEnviarCampanha"
                   target="_blank"
                   rel="noreferrer noopener"
                   class="index-link07"
@@ -215,9 +253,7 @@
                   Ainda estamos Preparando coisas novas para você
                 </p>
                 <a
-                  href="https://mini-kraken.github.io/docs/dados"
-                  target="_blank"
-                  rel="noreferrer noopener"
+                  href="javascript:void(0)"
                   class="index-link08"
                 >
                   <p class="index-text35">Ver mais</p>
@@ -234,7 +270,7 @@
                   Ainda estamos Preparando coisas novas para você
                 </p>
                 <a
-                  href="https://mini-kraken.github.io/docs/dados"
+                  href="javascript:void(0)"
                   class="index-link09"
                 >
                   <p class="index-text38">Ver mais</p>
@@ -245,38 +281,93 @@
               <h1 class="index-text39">Estatística</h1>
               <div class="index-stats">
                 <div class="index-stat">
-                  <h1 class="index-text40"><span>...</span></h1>
+                  <h1 class="index-text40" id="userAmount"><span>...</span></h1>
                   <span class="index-text42">Usuários</span>
-                  <span class="index-text43">Usuarios que Usam a UNA</span>
+                  <span class="index-text43">Usuarios que usam a Una</span>
                 </div>
                 <div class="index-stat1">
-                  <h1 class="index-text44"><span>...</span></h1>
-                  <span class="index-text46">Servidores com a una</span>
+                  <h1 class="index-text44" id="serverAmount"><span>...</span></h1>
+                  <span class="index-text46">Servidores com a Una</span>
                   <span class="index-text47">
                     Servidores que Possuem a Incrível E Inigualável Una
                   </span>
                 </div>
                 <div class="index-stat2">
-                  <h1 class="index-text48"><span>...</span></h1>
+                  <h1 class="index-text48" id="commandAmount"><span>...</span></h1>
                   <span class="index-text50">
                     <span>Comandos disponíveis</span>
                   </span>
                   <span class="index-text52">
-                    Uma verdadeira Caixinha de surpresas
+                    Uma verdadeira caixinha de surpresas
                   </span>
                 </div>
                 <div class="index-stat3">
-                  <h1 class="index-text53"><span>...</span></h1>
+                  <h1 class="index-text53" id="version"><span>...</span></h1>
                   <span class="index-text55">Versão</span>
                   <span class="index-text56">
-                    Versão Atual que a Una está Rodando
+                    Versão atual que a Una está rodando
                   </span>
                 </div>
               </div>
+              <script>
+                fetch("https://api.github.com/gists/de2543aa80dee00274edf3861c7d087e")
+                .then(response => response.json())
+                .then((data) => {
+                    data = JSON.parse(data.files["botstatus.json"].content)
+                    document.getElementById("version").innerHTML = data.version
+                    let i = 0;
+                    const membersHolder = document.getElementById("userAmount");
+                    const server_amountHolder = document.getElementById("serverAmount")
+                    const commandsHolder = document.getElementById("commandAmount")
+                    const max = Math.max(data.members, data.server_amount, data.commands);
+                    const rateOfChange = max / 100;
+
+                    const funcs = {
+                      members() {
+                        i += rateOfChange;
+                        if (i >= data.members) {
+                          membersHolder.innerHTML = data.members;
+                          funcs.members = () => {};
+                          return;
+                        }
+                        membersHolder.innerHTML = Math.round(i)
+                      },
+                      server_amount() {
+                        i += rateOfChange;
+                        if (i >= data.server_amount) {
+                          server_amountHolder.innerHTML = data.server_amount;
+                          funcs.server_amount = () => {};
+                          return;
+                        }
+                        server_amountHolder.innerHTML = Math.round(i)
+                      },
+                      commands() {
+                        i += rateOfChange;
+                        if (i >= data.commands) {
+                          commandsHolder.innerHTML = data.commands;
+                          funcs.commands = () => {};
+                          return;
+                        }
+                        commandsHolder.innerHTML = Math.round(i)
+                      },
+                      update(max, interval) {
+                        funcs.members();
+                        funcs.server_amount();
+                        funcs.commands();
+                        if (i >= max) {
+                          clearInterval(interval);
+                        }
+                      }
+                    }
+                    const interval = setInterval(() => {
+                      funcs.update(max, interval);
+                    }, 50);
+                })
+              </script>
             </div>
           </div>
         </div>
-        <footer class="index-footer">
+        <footer class="index-footer mt-100">
           <a href="index.html" class="index-navlink">
             <img
               alt="logo"

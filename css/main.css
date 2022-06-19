@@ -1,5 +1,5 @@
 .button:hover {
-    transform: translateY(-10px) scale(1.05);
+    transform: translateY(-3px) scale(1.05);
     transition: 0.2s;
 }
 .button {
@@ -8,16 +8,12 @@
 }
 
 .size-up-anim:hover {
-    transform: translateY(-10px) scale(1.05);
+    transform: translateY(-3px) scale(1.05);
     transition: 0.2s;
 }
 .size-up-anim {
     transform: translateY(0px) scale(1);
     transition: 0.2s;
-}
-
-.background {
-    background-color: #0d0e10;
 }
 .info-block {
     width: 95vw;
@@ -27,20 +23,17 @@
     margin-top: 30px;
     margin-bottom: 30px;
 }
-.text-white-kraken {
-    color: #E6E6E6;
-}
-.nav-link.text-white-kraken:hover {
+.nav-link.text-secondary:hover {
     color: #C6C6C6;
 }
-.nav-link.text-white-kraken:focus {
+.nav-link.text-secondary:focus {
     color: #f80752;
 }
-.dropdown-item.text-white-kraken:hover {
+.dropdown-item.text-secondary:hover {
     background-color: #f80752;
     color: #E6E6E6;
 }
-.dropdown-item.text-white-kraken:focus {
+.dropdown-item.text-secondary:focus {
     background-color: #C6C6C6;
     color: #111316;
 }
@@ -70,9 +63,6 @@
 .premium-wrapper {
     margin: 0% 5%;
 }
-.bg-kraken-dark {
-    background-color: #111316;
-}
 .rounded-20 {
     border-radius: 20px;
 }
@@ -82,99 +72,7 @@
 .size-keeper {
     height: 48px;
 }
-@keyframes button-anim {
-    /*
-    Parte real = left
-    Parte imaginaria = top
-    
-    -200 ί
-    -7.6120467488713-161.731656763491 ί
-    -29.2893218813452-129.2893218813452 ί
-    -61.7316567634908-107.6120467488714 ί 
-    -100-100 ί
-    -138.268343236509-107.6120467488713 ί
-    -170.7106781186548-129.2893218813452 ί
-    -192.3879532511287-161.731656763491 ί
-    -200-200 ί
-    -192.3879532511286-238.2683432365092 ί
-    -170.7106781186549-270.7106781186546 ί
-    -138.2683432365085-292.3879532511289 ί
-    -100-300 ί
-    -61.7316567634914-292.3879532511288 ί
-    -29.2893218813451-270.7106781186546 ί
-    -7.6120467488714-238.2683432365092 ί
-    -200 ί
-    */
-    0% {
-        left: 0px;
-        top: -200px;
-    }
-    6.25% {
-        left: -7.6120467488713px;
-        top: -161.731656763491px;
-    }
-    12.5% {
-        left: -29.2893218813452px;
-        top: -129.2893218813452px;
-    }
-    18.75% {
-        left: -61.7316567634908px;
-        top: -107.6120467488714px;
-    }
-    25% {
-        left: -100px;
-        top: -100px;
-    }
-    31.25% {
-        left: -138.268343236509px;
-        top: -107.6120467488713px;
-    }
-    37.5% {
-        left: -170.7106781186548px;
-        top: -129.2893218813452px;
-    }
-    43.75% {
-        left: -192.3879532511287px;
-        top: -161.731656763491px;
-    }
-    50% {
-        left: -200px;
-        top: -200px;
-    }
-    56.25% {
-        left: -192.3879532511286px;
-        top: -238.2683432365092px;
-    }
-    62.5% {
-        left: -170.7106781186549px;
-        top: -270.7106781186546px;
-    }
-    68.75% {
-        left: -138.2683432365085px;
-        top: -292.3879532511289px;
-    }
-    75% {
-        left: -100px;
-        top: -300px;
-    }
-    81.25% {
-        left: -61.7316567634914px;
-        top: -292.3879532511288px;
-    }
-    87.5% {
-        left: -29.2893218813451px;
-        top: -270.7106781186546px;
-    }
-    93.75% {
-        left: -7.6120467488714px;
-        top: -238.2683432365092px;
-    }
-    100% {
-        left: 0px;
-        top: -200px;
-    }     
-}
-    
+
 @font-face {
     font-family: nuku;
     src: url("/nuku1.ttf");
@@ -191,21 +89,20 @@
 .z-index--1 {
     z-index: -1;
 }
-.mt--200 {
-    margin-top: -150px;
+.mt-100 {
+    margin-top: 100px;
 }
-.nuvem {
-    background-image: url('/img/nuvem.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 70vw;
+body {
+    margin-top: 100px;
 }
-.transparent-bg {
-    background-color: transparent;
-    mask-image: url('/img/kraken-bg.png');
-    -webkit-mask-image: url('/img/kraken-bg.png');
+html {
+    font-family: Inter;
+    font-size: 16px;
 }
-.transform-pos-anim {
-    animation: button-anim 8s infinite linear;
-    top: -200px;
+.scrollable-container {
+    overflow-y: scroll;
+    height: calc(100vh - 100px);
+}
+.accordion-button:focus {
+    box-shadow: 0 0 0 0;
 }
