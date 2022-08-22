@@ -1,4 +1,4 @@
-fetch("https://api.github.com/gists/de2543aa80dee00274edf3861c7d087e")
+fetch("https://api.github.com/gists/5696808013548492a67fb21c32759479")
                 .then(response => response.json())
                 .then((data) => {
                     data = JSON.parse(data.files["botstatus.json"].content)
