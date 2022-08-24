@@ -8,7 +8,6 @@ if (window.innerWidth < 768) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-	AOS.init();
 
 	var hoverAnimationTriggerList = [].slice.call(document.querySelectorAll('[data-bss-hover-animate]'));
 	var hoverAnimationList = hoverAnimationTriggerList.forEach(function (hoverAnimationEl) {
