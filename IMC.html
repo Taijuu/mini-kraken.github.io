@@ -1,76 +1,102 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>IMC</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
+<!DOCTYPE html>
+<html lang="pt">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Mini Kraken</title>
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Um Projeto, que busca Democratizar o RPG de mesa, Conheça Inanimalia Fortuna Tenebris Verteri, O Bot que vai revolucionar como você joga RPG">
+    <meta name="twitter:description" content="Fortuna, uma iniciativa que busca democratizar o rpg de mesa, o Kraken ressurge agora para rolar seus dados.">
+    <meta name="twitter:image" content="https://minikraken.tk/assets/img/Comissão 5.2 l Sem efeitos.png">
+    <meta property="og:image" content="https://minikraken.tk/assets/img/Sem-Título-1.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Conheça Inanimalia Fortuna um Bot de RPG diferente do que ja viu..">
+    <link rel="icon" type="image/svg+xml" sizes="147x150" href="assets/img/Logo%20Full%20-%20Red%20Kraken.svg">
+    <link rel="icon" type="image/svg+xml" sizes="147x150" href="assets/img/Logo%20Full%20-%20Red%20Kraken.svg">
+    <link rel="icon" type="image/svg+xml" sizes="147x150" href="assets/img/Logo%20Full%20-%20Red%20Kraken.svg">
+    <link rel="icon" type="image/svg+xml" sizes="147x150" href="assets/img/Logo%20Full%20-%20Red%20Kraken.svg">
+    <link rel="icon" type="image/svg+xml" sizes="147x150" href="assets/img/Logo%20Full%20-%20Red%20Kraken.svg">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Banner-Heading-Image-images.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Icon-Centered-Between-Lines.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Centered-Links-icons.css">
+    <link rel="stylesheet" href="assets/css/Off-Canvas-Sidebar-Drawer-Navbar.css">
+    <link rel="stylesheet" href="assets/css/Pricing-Clean-badges.css">
+    <link rel="stylesheet" href="assets/css/scoll.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Team-with-rotating-cards.css">
+</head>
 
+<body style="background: var(--dark);">
+    <section class="position-relative py-4 py-xl-5">
+        <div class="container position-relative">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-8 col-lg-6 col-xl-5 col-xxl-4" style="border-style: none;">
+                    <div class="card mb-5" style="border-style: none;">
+                        <div class="card-body p-sm-5" style="background: var(--dark);box-shadow: 12px 6px 20px 0px rgb(0,0,0);border-style: none;border-color: rgb(255,36,36);">
+                            <h2 class="text-center mb-4"><span style="color: rgb(248, 7, 82);">Calculador de IMC</span></h2>
+                            <form method="post">
+                                <div class="mb-3"><input class="form-control" type="text" id="altura" placeholder="Altura em Metros" name="var1" autofocus="" required="" style="color: var(--red);background: #151719;border-style: none;"></div>
+                                <div class="mb-3"><input class="form-control" type="text" id="peso" placeholder="Peso em KG" name="var2" style="color: var(--red);background: #151719;border-style: none;"></div>
+                                <div><button class="btn btn-primary d-block w-100" id="confirm" type="button" style="margin-bottom: 24px;">Calcular</button></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card mb-5" style="border-style: none;">
+                        <div class="card-body p-sm-5" style="background: var(--dark);box-shadow: 12px 6px 20px 0px rgb(0,0,0);border-style: none;border-color: rgb(255,36,36);">
+                            <h2 class="text-center mb-4"><span style="color: rgb(248, 7, 82);">Resultado:</span></h2>
+                            <h2 class="text-center mb-4" id="result" style="margin-top: -23px;"><span style="color: rgb(248, 7, 82);">...</span></h2>
+                            <h3 class="text-center mb-4" id="result-text" style="padding-bottom: 0px;padding-top: 0px;margin-top: -12px;"><span style="color: rgb(248, 7, 82);">...</span></h3>
+                            <form method="post">
+                                <div class="mb-3"></div>
+                                <div class="mb-3"></div>
+                                <div></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/Off-Canvas-Sidebar-Drawer-Navbar.js"></script>
+    <script src="assets/js/Off-Canvas-Sidebar-Drawer-Navbar-1.js"></script>
+    <script>   //ao apertar o botão calcule o IMC e retorne em result e result text
+        document.getElementById("confirm").addEventListener("click", function() {
+            var altura = document.getElementById("altura").value;
+            var peso = document.getElementById("peso").value;
+            var imc = peso / (altura * altura);
+            document.getElementById("result").innerHTML = imc.toFixed(2);
+            if (imc < 18.5) {
+                document.getElementById("result-text").innerHTML = "Abaixo do peso";
+            } else if (imc >= 18.5 && imc <= 24.9) {
+                document.getElementById("result-text").innerHTML = "Peso normal";
+            } else if (imc >= 25 && imc <= 29.9) {
+                document.getElementById("result-text").innerHTML = "Sobrepeso";
+            } else if (imc >= 30 && imc <= 34.9) {
+                document.getElementById("result-text").innerHTML = "Obesidade grau 1";
+            } else if (imc >= 35 && imc <= 39.9) {
+                document.getElementById("result-text").innerHTML = "Obesidade grau 2";
+            } else if (imc >= 40) {
+                document.getElementById("result-text").innerHTML = "Obesidade grau 3";
+            }
+        });
+            
+            //IMC abaixo de 17 = muito abaixo do peso
+            //IMC entre 17 e 18,49 = abaixo do peso
+            //IMC entre 18,5 e 24,99 = ideal
+            //IMC entre 25 e 29,99 = acima do peso ideal
+            //IMC entre 30 e 34,99 = obesidade nível I
+            //IMC entre 35 e 39,99 = obesidade nível II considerada ‘severa’
+            //IMC acima de 40 = obesidade nível III considerada ‘mórbida’
+        
+        </script>
+</body>
 
-<style> 
-    body {
-        background-color: #1b1c22;
-    }
-
-    .iimc {
-        color: #3c50fa;
-    }
-</style>
-
-
-
-
-
-<script>
-    function mostra(texto) { 
-        document.write(texto);
-    }
-
-    function calculaImc(altura, peso) {
-        return peso / (altura * altura);
-    }
-
-    //Insira aqui os valores.
-    var altura = parseFloat(prompt("Informe Sua Altura"));
-    var peso = parseFloat(prompt("Informe Seu Peso"));
-
-
-    //Executar e Retornar
-    
-    var imc = calculaImc(altura, peso);
-    mostra("<h1 class='iimc'>" + "O IMC calculado é " + imc + "</h1>");
-
-        if(imc < 17) {
-            mostra("<h2 class='iimc'>Muito Abaixo do Peso</h2>");
-        }
-        else if(imc < 18.5) {
-            mostra("<h2 class='iimc'>Abaixo do Peso</h2>");
-        }
-        else if(imc < 24.99) {
-            mostra("<h2 class='iimc'>Peso Ideal</h2>");
-        }
-        else if(imc < 29.99) {
-            mostra("<h2 class='iimc'>Acima do Peso</h2>");
-        }
-        else if(imc < 34.99) {
-            mostra("<h2 class='iimc'>Obesidade Tipo 1</h2>");
-        }
-        else if(imc < 39.99) {
-            mostra("<h2 class='iimc'>Obesidade Tipo 2</h2>");
-        }
-        else if(imc > 40) {
-            mostra("<h2 class='iimc'>Obesidade Morbida</h2>");
-        }
-  
-//IMC abaixo de 17 = muito abaixo do peso
-//IMC entre 17 e 18,49 = abaixo do peso
-//IMC entre 18,5 e 24,99 = ideal
-//IMC entre 25 e 29,99 = acima do peso ideal
-//IMC entre 30 e 34,99 = obesidade nível I
-//IMC entre 35 e 39,99 = obesidade nível II considerada ‘severa’
-//IMC acima de 40 = obesidade nível III considerada ‘mórbida’
-
-</script>
+</html>
