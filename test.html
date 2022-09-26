@@ -1,0 +1,16 @@
+<meta charset="utf-8" />
+
+<script>
+    //exemplo http://127.0.0.1:5500/test.html?{"hp":240,"1":1,"2":2,"3":2,"4":0}
+const {
+    host, hostname, href, origin, pathname, port, protocol, search
+  } = window.location
+ //transforme search em objeto, remova a ? substitua %22 por " , substitua %20 por espaço e substitua %7B por { e %7D por } 
+    const obj = JSON.parse(search.replace("?", "").replace(/%22/g, '"').replace(/%20/g, " ").replace(/%7B/g, "{").replace(/%7D/g, "}"))
+    console.log(obj)
+    //escreva hp na tela
+    document.write(obj.hp)
+
+  
+
+</script>
