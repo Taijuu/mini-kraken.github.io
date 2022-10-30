@@ -1,14 +1,97 @@
-<meta charset="utf-8" />
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha</title>
+    <script src="https://unpkg.com/pdf-lib@1.11.0"></script>
+    <script src="https://unpkg.com/downloadjs@1.4.7"></script>
+</head>
+<body>
+    
+</body>
 <script>
     //exemplo http://127.0.0.1:5500/test.html?{"hp":240,"1":1,"2":2,"3":2,"4":0}
-const {
-    host, hostname, href, origin, pathname, port, protocol, search
-  } = window.location
- //transforme search em objeto, remova a ? substitua %22 por " , substitua %20 por espaço e substitua %7B por { e %7D por } 
+
+    //exemplo 2 http://127.0.0.1:5500/test.html?{"hp_max":100,"hp_value":110,"name":"User","pname":"UserRealName","0":1,"1":2,"2":2,"3":0,"4":0,"5":0}
+    
+    const {
+        host, hostname, href, origin, pathname, port, protocol, search
+    } = window.location
+    //transforme search em objeto, remova a ? substitua %22 por " , substitua %20 por espaço e substitua %7B por { e %7D por } 
     const obj = JSON.parse(search.replace("?", "").replace(/%22/g, '"').replace(/%20/g, " ").replace(/%7B/g, "{").replace(/%7D/g, "}"))
     console.log(obj)
 
-</script>
+    //HP extra = hp_value - hp_max porém o resultado precisa ser positivo
+    const hp_extra = Math.max(obj.hp_value - obj.hp_max, 0)
 
+    //exiba hp no html
+    document.body.innerHTML = obj.hp
+
+    const { PDFDocument } = PDFLib
+
+    async function fillForm() {
+        const formUrl = 'una_dnd_ficha.pdf'
+        const formPdfBytes = await fetch(formUrl).then(res => res.arrayBuffer())
+
+        const pdfDoc = await PDFDocument.load(formPdfBytes)
+
+        const form = pdfDoc.getForm()
+
+        const nameField = form.getTextField('name')
+        const secondNameField = form.getTextField('name1')
+        const treeNameField = form.getTextField('name3')
+        const classAndLevelField = form.getTextField('class')
+        const raceField = form.getTextField('race')
+        const playerNameField = form.getTextField('player_name')
+        const hpMaxField = form.getTextField('hp_max')
+        const hpCurrentField = form.getTextField('hp_value')
+        const hpExtraField = form.getTextField('hp_extra')
+
+        const attri_0 = form.getTextField('atri_large_0')
+        const attri_1 = form.getTextField('atri_large_1')
+        const attri_2 = form.getTextField('atri_large_2')
+        const attri_3 = form.getTextField('atri_large_3')
+        const attri_4 = form.getTextField('atri_large_4')
+        const attri_5 = form.getTextField('atri_large_5')
+
+        //Definir Valores de HP
+        hpCurrentField.setText(obj.hp_value.toString())
+        hpMaxField.setText(obj.hp_max.toString())
+        hpExtraField.setText(hp_extra.toString())
+        //Definir Nome
+        playerNameField.setText(obj.pname)
+        nameField.setText(obj.name)
+        secondNameField.setText(obj.name)
+        treeNameField.setText(obj.name)
+        
+        //definir atributos
+        attri_0.setText(obj["0"].toString())
+        attri_1.setText(obj["1"].toString())
+        attri_2.setText(obj["2"].toString())
+        attri_3.setText(obj["3"].toString())
+        attri_4.setText(obj["4"].toString())
+        attri_5.setText(obj["5"].toString())
+
+
+        const pdfBytes = await pdfDoc.save()
+        //abra o pdf em uma nova aba
+        window.open(URL.createObjectURL(new Blob([pdfBytes], { type: 'application/pdf' })))
+        
+
+
+        
+
+
+
+
+        // Trigger the browser to download the PDF document
+        //download(pdfBytes, "pdf-lib_form_creation_example.pdf", "application/pdf");
+    }
+
+    fillForm()
+
+</script>
+</html>
 
