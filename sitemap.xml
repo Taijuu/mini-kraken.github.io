@@ -7,6 +7,9 @@
         <loc>https://minikraken.tk/docs/teste.html</loc>
     </url>
     <url>
+        <loc>https://minikraken.tk/integration/dnd_download.html</loc>
+    </url>
+    <url>
         <loc>https://minikraken.tk/404.html</loc>
     </url>
     <url>
@@ -19,6 +22,6 @@
         <loc>https://minikraken.tk/</loc>
     </url>
     <url>
-        <loc>https://minikraken.tk/plains.html</loc>
+        <loc>https://minikraken.tk/plans.html</loc>
     </url>
 </urlset>
