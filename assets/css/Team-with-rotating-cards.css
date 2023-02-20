@@ -18,7 +18,6 @@
 }
 
 .card-container-imagia {
-  -webkit-perspective: 1500px;
   -moz-perspective: 1500px;
   -o-perspective: 1500px;
   perspective: 1500px;
@@ -26,7 +25,6 @@
 }
 
 .card-container-imagia:hover .card-imagia {
-  -webkit-transform: rotateY( 180deg );
   -moz-transform: rotateY( 180deg );
   -o-transform: rotateY( 180deg );
   transform: rotateY( 180deg );
@@ -37,7 +35,6 @@
   -moz-transition: -moz-transform .5s;
   -o-transition: -o-transform .5s;
   transition: transform .5s;
-  -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -45,7 +42,6 @@
 }
 
 .front-imagia, .back-imagia {
-  -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -62,7 +58,6 @@
 }
 
 .back-imagia {
-  -webkit-transform: rotateY( 180deg );
   -moz-transform: rotateY( 180deg );
   -o-transform: rotateY( 180deg );
   transform: rotateY( 180deg );
